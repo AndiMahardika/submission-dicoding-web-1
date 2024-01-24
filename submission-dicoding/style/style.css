@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@500&family=Quicksand:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* navbar */
+nav.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-inline: auto;
+    padding: 20px;
+    background-color: #f4f4f5;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+nav.navbar .logo img{
+    width: 150px;
+}
+
+nav.navbar ul.nav-list{
+    display: flex;
+    padding-left: 0;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+nav.navbar ul.nav-list li{
+    list-style-type: none;
+}
+
+nav.navbar ul.nav-list a{
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 900;
+    color: #462511;
+    padding: .5rem 1.5rem;
+    transition: all .2s ease-in-out;
+    position: relative;
+}
+
+nav.navbar ul.nav-list li:nth-child(4) a{
+    border-radius: 999px;
+    background-color: #A87946;
+    color: white;
+}
+
+nav.navbar ul.nav-list li a::after{
+    content: "";
+    display: block;
+    width: 50%; 
+    height: 3px; 
+    background-color: #462511; 
+    position: absolute;
+    bottom: 0;
+    left: 25%; 
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav.navbar ul.nav-list li a:hover::after{
+    transform: scaleX(1); 
+}
+
+nav.navbar ul.nav-list li.no-underline a::after{
+    display: none;
+}
+
+/* jumbotron */
+.jumbotron{
+    max-width: 1200px;
+    display: flex;
+    margin-inline: auto;
+    width: 100%;
+    padding: 10rem 4rem;
+    align-items: center;
+}
+
+.jumbotron .jumbotron-description{
+    flex: 1 1;
+}
+
+.jumbotron .jumbotron-description .title{
+    font-size: 3.5rem;
+    margin-block: 1rem;
+}
+
+.jumbotron .jumbotron-description p {
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+}
+
+.jumbotron .jumbotron-description button{
+    padding: .8rem 2.5rem;
+    margin-block-start: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;    
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+   
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-color: #A87946;
+    cursor: pointer;
+    transition: all .15s ease-in;
+}
+
+.jumbotron .jumbotron-description button a{
+    color: white;
+    text-decoration: none;
+}
+
+.jumbotron .jumbotron-description button:hover{
+    border: 3px solid #462511;
+    background-color: transparent;
+    color: #462511;
+}
+
+.jumbotron .jumbotron-description button:hover a{
+    color: #462511;
+}
+
+.jumbotron .jumbotron-image {
+    flex: 1;
+    display: flex;
+}
+
+.jumbotron .jumbotron-image img{
+    margin: auto;
+    min-width: 250px;
+    width: 300px;
+}
+
+/* Main */
+main {
+    display: flex;
+    padding: 20px;
+    gap: 1.5rem;
+    background-color: #f4f4f5;
+    flex-direction: row-reverse;
+}
+
+h2, h3{
+    color: #462511;
+}
+
+.profile .header-profile{
+    text-align: center;
+    background-color: white;
+}
+
+.profile.card {
+    background-color: white;
+}
+
+main .content-artikel {
+    background-color: #f4f4f5;
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile img {
+    width: 200px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+article#cerita.card,
+article#sejarah.card,
+article#karakter.card {
+    background-color: white;
+}
+
+div.text p {
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 15px;
+}
+
+aside {
+    flex: 1;    
+}
+
+aside section{
+    text-align: center;
+}
+
+/* card */
+.card-container{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.card-char{
+    text-align: center;
+    width: 290px;
+    height: auto;
+    border-radius: 5px;
+    padding: 7px;
+    border: 1px solid #462511;
+    box-sizing: border-box;
+}
+
+.card-char img {
+    width: 100%;
+    height: 250px;
+    transition: 1s;
+}
+
+.card-char img:hover{
+    transform: scaleX(-1);
+}
+
+.card-char button{
+    padding: 8px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #462511;
+    border: 3px solid transparent;
+    margin-top: 3px;
+}
+
+.card-char button span{
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+
+.card-char button:hover{
+    background-color: white;
+    border: 3px solid #462511;
+}
+
+.card-char button:hover span{
+    cursor: pointer;
+    color: #462511;
+}   
+
+h2.card-title{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    color: white;
+    background-color: #A87946;
+    font-weight: 900;
+    padding: 20px;
+}
+
+/* Alert */
+.alert {
+    padding: 15px;
+    background-color: #f44336; 
+    color: white; 
+    text-align: center;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+
+    display: flex;
+}
+  
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.closebtn:hover {
+    color: black;
+}
+
+.alert img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+/* more-less-text */
+.text span.read-more{
+    display: none;
+}
+
+.show-text span.read-more{
+    display: inline;
+}
+
+.show-text span.dots{
+    display: none;
+}
+
+.btn-read-more{
+    padding: 5px;
+    font-weight: 700;
+    background-color: #A87946;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+button.btn-read-more {
+    margin-top: 10px;
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+    nav.navbar {
+        flex-direction: column;
+    }
+
+    nav.navbar ul.nav-list{
+        flex-wrap: wrap;
+        column-gap: .5rem;
+    }
+
+    .jumbotron {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .jumbotron .jumbotron-description .title{
+        font-size: 3rem;
+    }
+
+    .jumbotron .jumbotron-description p{
+        font-size: 1rem;
+    }
+
+    .jumbotron .jumbotron-image{
+        order: -1;
+    }
+
+    main aside {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    main {
+        flex-flow: column nowrap;
+        flex-direction: column-reverse;
+    }
+    main aside {
+        align-self: center;
+    }
+}
